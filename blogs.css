@@ -1,0 +1,338 @@
+/*Global styles*/
+body,html{
+    height: 100%;
+    margin:4px;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style:normal;
+    color:black;
+    height:100%;
+    background: url("https://thumbs.dreamstime.com/z/deluxe-food-background-food-photography-different-fruits-copy-space-high-resolution-product-84678361.jpg") center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav{
+    position: relative;
+    top: 0px;
+    z-index: 1000;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.navimg {
+  height: 100px;
+  width: auto;
+  animation-name: rotatingImage;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  transform-style: preserve-3d;
+}
+  
+@keyframes rotatingImage{
+    0% { 
+        transform: rotate3d(1, 1, 0, 0deg);
+    }
+    100% { 
+        transform: rotate3d(1, 1, 1, 360deg); 
+    }
+}
+nav ul{
+    list-style:none;
+    padding:0;
+    display:flex;
+    justify-content: end;
+    text-decoration: none;
+    align-items:flex-end;
+
+}
+nav ul li{
+    position:relative;
+    margin-top: 0%;
+}
+nav ul li a{
+    background: #1176ba;
+    color:#ecf0f1;
+    text-decoration: none;
+    padding:15px 20px;
+    display:block;
+    transition: background 0.3s, transform 0.2s;
+}
+nav ul li a:hover{
+    transform:scale(1.05);
+    text-rendering: geometricPrecision;
+    text-decoration: underline;
+    zoom: 110%;
+}
+header{
+    background: linear-gradient(to right,#6a11cb,#2575fc);
+    padding:10px 20px;
+    padding-top: 20px;
+    width:1000px;
+    height:200px;
+    color:white;
+    position:relative;
+    top:0px;
+    left:200px;
+    border:0px;
+    border-radius:170px;
+    animation:fadein 5s;
+}
+@keyframes fadein{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+#home{
+    font-family: castellar;
+    font-size: 2.5em;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow:5px 5px 4px black;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #007fe6, 0 0 40px #1c19a9, 0 0 50px #0c2a96, 0 0 60px #0b3a91, 0 0 70px #171e9a;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;}
+    }
+.a{
+    margin:10px 20px;
+    padding:15px 5px;
+}
+.a:hover{
+    zoom:105%;
+}
+#posts{
+    width:1500px;
+    height:1200px;
+    position: relative;
+    left:5px;
+    justify-content: center;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows:repeat(2,1fr);
+    box-sizing:border-box;
+    gap:5px 5px;
+    color:white;
+    flex-shrink: 1;
+}
+#post1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:1;
+    background: linear-gradient(to right,#6a11cb,#2575fc);
+    margin:3px;
+    padding:2px;
+    border:0px;
+    border-radius:20px;
+    transition: transform 0.2s;
+    height:1100px;
+
+}
+#post2{
+    grid-column:2/3;
+    grid-row-start:1;
+    background: linear-gradient(to right,#6a11cb,#2575fc);
+    margin:2px;
+    border:0px;
+    padding:2px;
+    border-radius:20px;
+    transition: transform 0.2s;
+    height: 1100px;
+}
+#post1:hover{
+    transform:scale(1.03);
+}
+#post2:hover{
+    transform:scale(1.03);
+}
+#blog1{
+    font-size:2.1em;
+    text-align: center;
+    text-wrap: wrap;
+    text-shadow:5px 5px 4px black;
+}
+#blog2{
+    font-size:2.1em;
+    text-align: center;
+    text-shadow: 5px 5px 4px black;
+}
+.b{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px 15px rgba(152, 148, 148, 0.5);
+}
+.b:hover{
+    transform:scale(1.2,1.2);
+}
+.c{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px 15px rgba(134, 128, 128, 0.5);
+}
+.c:hover{
+    transform: scale(1.2,1.2);
+}
+p{
+    text-align: center;
+}
+h3{
+    text-align: center;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+iframe{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+@keyframes infiniteScroll {
+    from {transform: translateX(0)}
+    to {transform: translateX(-50%)}
+  }
+  .scroll {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .horizontal-scrolling-items {
+    display: flex;
+    font-size: 20px;
+    width: 2600px;
+    background:black;
+    color:white;
+    padding-left: 100%;
+    animation-name: infiniteScroll;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .horizontal-scrolling-items__item {
+    white-space: nowrap;
+  }
+  #about{
+    background: linear-gradient(to right,#6a11cb,#2575fc);
+    padding:10px 20px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color:white;
+    position:relative;
+    margin:2px;
+    height:250px;
+  }
+  #about h2{
+    font-size:2.1em;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    text-shadow:5px 5px 4px black;
+  }
+  #about h2 p{
+    text-align: center;
+  }
+  #emailid a{
+    color: white;
+  }
+  #emailid a:hover{
+    color:rgb(37, 169, 213);
+  }
+  #list{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #list li a{
+    color:white;
+  }
+  #list li a:hover{
+    color:#23c3db;
+  }
+  #black:hover{
+    color: rgb(32, 187, 218);
+  }
+  #Contactme{
+    background: linear-gradient(to right,#6a11cb,#2575fc);
+    padding:10px 20px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color:white;
+    margin:2px;
+    height:400px;
+    text-align: left;
+  }
+  .side{
+    text-shadow:5px 5px 4px black;
+    font-size:2.1em;
+  }
+  button{
+    color:white;
+    background: #2f0135;
+  }
+  #message{
+    box-sizing: border-box;
+    border:1px solid black;
+    background: #678dce;
+    color:white;
+    padding:6px;
+    width:500px;
+  }
+  #Email{
+    box-sizing: border-box;
+    background:#678dce;
+    color:white; 
+    width:400px;
+  }
+  #Name{
+    box-sizing:border-box ;
+    background: #678dce;
+    color:white;
+    width:400px;
+  }
+  label{
+    padding:5px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  button:focus{
+    outline-style: dashed;
+  }
+  button:active{
+    opacity: 1;
+    background: purple;
+  }
+footer{
+    text-align: end;
+    color:yellow;
+    font-weight: 200;
+}
+footer p a{
+    color:yellow;
+}
+@media(max-width:768px){
+    nav ul{
+        flex-direction:column;
+        align-items: center;
+    }
+    .container{
+        margin:10px 0,
+    }
+    #Contactme{
+        height:300px;
+    }
+    #message{
+        width:200px;
+    }
+}
